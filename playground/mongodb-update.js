@@ -8,6 +8,9 @@ var db = client.db('TodoApp');
   console.log('Connected to the database');
   db.collection('Users').findOneAndUpdate({_id : new ObjectId("5ba52b4721b552a4ccc96155")},
     {
+      $set : {
+        name : 'Dhanvi Desai'
+      },
       $inc : {
         age : 1
       }
